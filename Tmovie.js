@@ -13,6 +13,7 @@ let generalLink = 'https://api.themoviedb.org/3/search/movie?&api_key=5aafdc3157
 
 let userCommand= document.getElementById("bar");
 let sendForm = document.getElementById("form");
+let arr = [];
 
 function findMovie(link,option)  {
   fetch ( link , option)
@@ -50,7 +51,13 @@ function findMovie(link,option)  {
  //  findMovie(generalLink + "dream", options);
 
   
-  sendForm.addEventListener("submit",newfunc);
+  sendForm.addEventListener("submit",(ev) = {
+    ev.preventDefault()
+    let myOb = {value: userCommand.value}
+    arr.push( myOb)
+    findMovie(generalLink + arr[0].value, options);
+
+  });
   
    let please = document.getElementById("press");
    please.addEventListener("click",
