@@ -70,6 +70,6 @@ function findMovie(link,option)  {
  //  x.src = "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg";
  //   document.body.appendChild(x);
   
-  
+  debugger
   
   
