@@ -50,7 +50,10 @@ function findMovie(link,option)  {
  //  findMovie(generalLink + "dream", options);
 
   
-  sendForm.addEventListener("submit",newfunc);
+  sendForm.addEventListener("submit",(ev) = {
+    ev.preventDefault()
+    newfunc()
+  });
   
    let please = document.getElementById("press");
    please.addEventListener("click",
