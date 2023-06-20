@@ -40,35 +40,24 @@ function findMovie(link,option)  {
       newDiv.appendChild(newP);
       document.getElementById('poster-frame').appendChild(newDiv);
       
-      
-      
-      
+    
     } })
   
   .catch(err => console.error(err)); };
- //  findMovie(sampleLink, options);
+   findMovie(sampleLink, options);
  //  findMovie(generalLink + "dream", options);
 
   
-  sendForm.addEventListener("submit",newfunc);
+sendForm.addEventListener("submit",(ev) =>{
+  ev.preventDefault();
+  document.getElementById("poster-frame").innerHTML= "";
+  findMovie(generalLink + userCommand.value, options);
+  console.log(userCommand.value);
+  sendForm.reset();
   
-   let please = document.getElementById("press");
-   please.addEventListener("click",
-   function() {
-     findMovie(generalLink + "dream", options);
-   })
+});
+  
    
-   
-   
-   function newfunc() {
-     
-   findMovie(generalLink + "dream", options);
-    alert(`${generalLink + userCommand.value}`);
-    
-   }
- //const x =   document.createElement('img');
- //  x.src = "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg";
- //   document.body.appendChild(x);
   
   
   
